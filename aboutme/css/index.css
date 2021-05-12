@@ -1,0 +1,302 @@
+/* 清除默认样式-begin */
+* {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: initial;
+}
+
+ul {
+	list-style: none;
+}
+
+/* 清除默认样式-end */
+
+
+/**
+ *  通过伪元素清除浮动，防止高度塌陷
+ */
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+/* 关于我-begin */
+#about {
+	background-image: url(../imgs/geometry.png);
+	background-repeat: repeat;
+	padding: 40px 0;
+	/*使文本和图片居中*/
+	text-align: center;
+}
+
+/*qq头像*/
+#about .qq-avatar img {
+	border-radius: 50%;
+	width: 120px;
+	transition: transform 0.6s;
+}
+
+#about .qq-avatar img:hover {
+	transform: rotate(360deg);
+}
+
+/*qq头像*/
+
+/*个人简介*/
+#about .info {
+	padding-top: 20px;
+	font-size: 20px;
+	color: #666;
+	max-width: 800px;
+	margin: 0 auto;
+	line-height: 1.6;
+}
+
+/*个人简介*/
+/* 关于我-end */
+
+/*查看更多按钮-begin*/
+.common-more {
+	display: inline-block;
+	font-size: 24px;
+	padding: 20px 60px;
+	border: 1px solid #ddd;
+	transition: background-color 0.4s;
+}
+
+.common-more:hover {
+	background-color: #FF0000;
+	color: #FFF;
+}
+/*查看更多按钮-end*/
+
+
+/*通用子标题-begin*/
+.common-title{
+	display: inline-block;
+}
+
+.common-title h2{
+	font-weight: normal;
+	font-size: 36px;
+	border: 1px solid #ddd;
+	padding: 2px 26px 13px 26px;
+}
+
+.common-title span{
+	position: relative;
+	bottom: 10px;
+	background-color: #fff;
+	font-size: 12px;
+	color: #808080;
+	padding: 0 10px;
+}
+/*通用子标题-end*/ 
+
+
+
+/*我的相册-begin*/
+#album {
+	max-width: 1360px;
+	margin: 0 auto;
+	text-align: center;
+	border-bottom: 1px solid #DDD;
+	padding: 40px 0;
+}
+
+#album .album-list{
+	padding-top: 40px;
+}
+
+#album .album-list li {
+	width: 33.33%;
+	float: left;
+	box-sizing: border-box;
+	padding: 0 12px;
+	margin-bottom: 50px;
+}
+
+#album .album-list li div{
+	/*防止图片放大时溢出*/
+	overflow: hidden;
+	position: relative;
+	box-shadow: #808080 0 0 8px;
+	border-radius: 5px;
+}
+
+#album .album-list li div img {
+	vertical-align: top;
+	width: 100%;
+	height: 600px;
+	transition: transform 0.4s;
+}
+
+#album .album-list li div span {
+	visibility: hidden;
+	position: absolute;
+	background-color: #202935;
+	opacity: 0.5;
+	padding: 4px 8px;
+	font-size: 20px;
+	color: #FFF;
+	right: 0;
+	bottom: 0;
+}
+
+#album .album-list li div:hover img{
+	transform: scale(1.2);
+}
+
+#album .album-list li div:hover span{
+	visibility: visible;
+}
+/*我的相册-end*/
+
+
+/*我的成就-begin*/
+#achievement {
+	text-align: center;
+	padding: 60px 0;
+	border-bottom: 1px solid #DDD;
+}
+
+#achievement  .common-title{
+	margin-bottom:40px;
+}
+
+#achievement  .common-more{
+	margin-top: 40px;
+}
+
+#achievement .achievement-list {
+	text-align: left;
+	padding: 30px 0;
+	max-width: 800px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#achievement .achievement-list:before{
+	content: "";
+	width: 5px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background-color: #AADAFA;
+}
+
+
+#achievement .achievement-list li{
+	padding-left: 32px;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+#achievement .achievement-list li:last-child{
+	margin-bottom: 0;
+}
+
+#achievement .achievement-list li:before{
+	content: "";
+	position: absolute;
+	left: -6px;
+	top: 0;
+	width: 16px;
+	height: 16px;
+	background-color: #AADAFA;
+	border-radius: 50%;
+	box-shadow: 0 0 8px;
+	transition: background-color 0.5s;
+}
+
+#achievement .achievement-list li:hover:before{
+	background-color: #FF0000;
+}
+
+#achievement .achievement-list li .time{
+	font-size: 14px;
+	color: #999;
+}
+
+#achievement .achievement-list li .content{
+	padding-top: 8px;
+	transition: all 0.5s;
+	font-size: 24px;
+}
+#achievement .achievement-list li .content:hover{
+	cursor: pointer;
+	transform: translateX(16px);
+	color: #AADAFA;
+}
+
+/*我的成就-end*/
+
+/*联系我-begin*/
+#concat {
+	background-color: #202935;
+	padding: 50px 0;
+}
+
+#concat h3 {
+	text-align: center;
+	color: #ccc;
+	font-size: 32px;
+	margin-bottom: 40px;
+}
+
+#concat .others {
+	margin: 0 auto;
+	width: 600px;
+}
+
+#concat .others .item {
+	float: left;
+	width: 33.3%;
+	text-align: center;
+}
+
+#concat .others .item a {
+	display: inline-block;
+	padding: 15px 50px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	color: #ccc;
+	transition: background-color 0.4s;
+	position: relative;
+}
+
+/* 图片隐藏 */
+#concat .others .item a div{
+	position: absolute;
+	left: -80px;
+	top: -560px;
+	border-radius: 3px;
+	background-color: #fff;
+	display: none;
+}
+#concat .others .item a div img{
+	width: 300px;
+}
+
+#concat .others .item a:hover div{
+	display: block;
+}
+
+#concat .others .item a i {
+	font-size: 32px;
+}
+/*联系我-end*/
+
+
+.footer {
+	padding: 20px 0;
+	text-align: center;
+	font-size: 24px;
+	color: gray;
+}
